@@ -26,7 +26,8 @@
     
     [self demo3];
     
-    [self demo4];
+    // demo3 和 demo4不能同时运行，因为tbDelegate会冲突
+//    [self demo4];
 
 }
 
@@ -64,6 +65,7 @@
     textView.backgroundColor = [UIColor colorWithWhite:0.7 alpha:1.0];
     textView.tbDelegate = self;
     textView.tag = 3;
+    textView.font = [UIFont systemFontOfSize:15.0];
     [self.view addSubview:textView];
 }
 
@@ -83,7 +85,7 @@
 }
 
 - (void)changeHeight:(CGFloat)height textString:(NSString *)text textView:(UITextView *)textView {
-    TBTextView *tbtextView = (TBTextView *)[self.view viewWithTag:4];
+    TBTextView *tbtextView = (TBTextView *)[self.view viewWithTag:3];
     tbtextView.height = height;
 }
 

@@ -62,12 +62,14 @@
     self.placeHolder.font = font;
     _maxHeight = _maxLine * self.font.lineHeight + self.textContainerInset.top
     + self.textContainerInset.bottom;
-    self.placeHolder.frame = self.bounds;
 }
 
 - (void)setPlaceHolderString:(NSString *)placeHolderString {
     _placeHolderString = placeHolderString;
     self.placeHolder.text = placeHolderString;
+    
+    // 解决光标首次进入的时候占位符会滚动
+    self.scrollEnabled = NO;
 }
 
 - (instancetype)init {
@@ -77,6 +79,7 @@
     }
     return self;
 }
+
 
 - (void)setMaxLine:(NSInteger)maxLine {
     _maxLine = maxLine;
@@ -91,15 +94,13 @@
 - (void)didChangeText:(NSNotification *)notification{
     
     // 隐藏显示占位符
-    self.placeHolder.hidden = self.hasText;
+    self.scrollEnabled = self.placeHolder.hidden = self.hasText;
     
     // 以防监听到非自己的文本变化
     TBTextView *textView = notification.object;
     if (textView == nil || textView != self || !self.tbDelegate || ![self.tbDelegate respondsToSelector:@selector(changeHeight:textString:textView:)]) return;
 
     // 计算宽高
-    NSLog(@"%@", self.font);
-    NSLog(@"%f", self.font.lineHeight);
     CGFloat height = [self.text boundingRectWithSize:CGSizeMake(self.frame.size.width - 10, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : self.font} context:nil].size.height + 0.5;// 加0.5以防显示不全 -10是因为输入框左右有边距
 
     // 记录初始化高度
