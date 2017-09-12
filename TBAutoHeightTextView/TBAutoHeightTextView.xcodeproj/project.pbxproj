@@ -17,6 +17,7 @@
 		510C27371F5EA4EE001E3AB5 /* TBAutoHeightTextViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 510C27361F5EA4EE001E3AB5 /* TBAutoHeightTextViewUITests.m */; };
 		510C27471F5EA54F001E3AB5 /* TBTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 510C27461F5EA54F001E3AB5 /* TBTextView.m */; };
 		510C274A1F5EA592001E3AB5 /* UIView+FOFExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 510C27491F5EA592001E3AB5 /* UIView+FOFExtension.m */; };
+		515513E11F67BF6900F96C41 /* 2017-09-12 15_07_34.gif in Resources */ = {isa = PBXBuildFile; fileRef = 515513E01F67BF6900F96C41 /* 2017-09-12 15_07_34.gif */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		510C27461F5EA54F001E3AB5 /* TBTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TBTextView.m; sourceTree = "<group>"; };
 		510C27481F5EA592001E3AB5 /* UIView+FOFExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+FOFExtension.h"; sourceTree = "<group>"; };
 		510C27491F5EA592001E3AB5 /* UIView+FOFExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+FOFExtension.m"; sourceTree = "<group>"; };
+		515513E01F67BF6900F96C41 /* 2017-09-12 15_07_34.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "2017-09-12 15_07_34.gif"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 		510C27101F5EA4EE001E3AB5 /* TBAutoHeightTextView */ = {
 			isa = PBXGroup;
 			children = (
+				515513DF1F67BF6900F96C41 /* screenshot */,
 				510C27441F5EA54F001E3AB5 /* code */,
 				510C27141F5EA4EE001E3AB5 /* AppDelegate.h */,
 				510C27151F5EA4EE001E3AB5 /* AppDelegate.m */,
@@ -156,6 +159,14 @@
 				510C27461F5EA54F001E3AB5 /* TBTextView.m */,
 			);
 			path = code;
+			sourceTree = "<group>";
+		};
+		515513DF1F67BF6900F96C41 /* screenshot */ = {
+			isa = PBXGroup;
+			children = (
+				515513E01F67BF6900F96C41 /* 2017-09-12 15_07_34.gif */,
+			);
+			path = screenshot;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,6 +279,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				510C27211F5EA4EE001E3AB5 /* LaunchScreen.storyboard in Resources */,
+				515513E11F67BF6900F96C41 /* 2017-09-12 15_07_34.gif in Resources */,
 				510C271E1F5EA4EE001E3AB5 /* Assets.xcassets in Resources */,
 				510C271C1F5EA4EE001E3AB5 /* Main.storyboard in Resources */,
 			);
@@ -536,6 +548,7 @@
 				510C273D1F5EA4EE001E3AB5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		510C273E1F5EA4EE001E3AB5 /* Build configuration list for PBXNativeTarget "TBAutoHeightTextViewTests" */ = {
 			isa = XCConfigurationList;
@@ -544,6 +557,7 @@
 				510C27401F5EA4EE001E3AB5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		510C27411F5EA4EE001E3AB5 /* Build configuration list for PBXNativeTarget "TBAutoHeightTextViewUITests" */ = {
 			isa = XCConfigurationList;
@@ -552,6 +566,7 @@
 				510C27431F5EA4EE001E3AB5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

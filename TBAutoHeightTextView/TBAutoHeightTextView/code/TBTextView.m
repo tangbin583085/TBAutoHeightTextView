@@ -33,6 +33,8 @@
 
 - (UITextView *)placeHolder {
     if (_placeHolder == nil) {
+        
+        // 为什么用 UITextView 作占位符而不用UILabel，是因为UITextView与本身文字可以重叠一致    UITextView的上下有textContainerInset
         UITextView *placeHolder = [[UITextView alloc] init];
         _placeHolder = placeHolder;
         placeHolder.userInteractionEnabled = NO;
